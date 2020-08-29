@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ViewtaskComponent } from './components/viewtask/viewtask.component';
+import { AngularComponent } from './components/angular/angular.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    ViewtaskComponent
+    ViewtaskComponent,
+    AngularComponent
   ],
   imports: [
     BrowserModule,
