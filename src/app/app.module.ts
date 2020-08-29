@@ -7,18 +7,42 @@ import { MenuComponent } from './components/menu/menu.component';
 import { ViewtaskComponent } from './components/viewtask/viewtask.component';
 import { AngularComponent } from './components/angular/angular.component';
 
+import { FormsModule } from "@angular/forms";
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import {
+  SwiperModule,
+  SwiperConfigInterface,
+  SWIPER_CONFIG,
+} from 'ngx-swiper-wrapper';
+  const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+    observer: true,
+    direction: 'horizontal',
+    threshold: 50,
+    spaceBetween: 5,
+    slidesPerView: 1,
+    centeredSlides: true,
+  };
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     ViewtaskComponent,
-    AngularComponent
+    AngularComponent,
   ],
   imports: [
+    SwiperModule,
     BrowserModule,
-    AppRoutingModule
+    FlexLayoutModule,
+    FormsModule,
+    AppRoutingModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+   providers: [
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG
+    }
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
