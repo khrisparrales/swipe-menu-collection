@@ -15,6 +15,7 @@ import {
   SwiperConfigInterface,
   SWIPER_CONFIG,
 } from 'ngx-swiper-wrapper';
+import { SliderCollectionComponent } from './components/slider-collection/slider-collection.component';
   const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     observer: true,
     direction: 'horizontal',
@@ -29,6 +30,7 @@ import {
     MenuComponent,
     ViewtaskComponent,
     AngularComponent,
+    SliderCollectionComponent,
   ],
   imports: [
     SwiperModule,
